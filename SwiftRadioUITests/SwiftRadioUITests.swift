@@ -73,6 +73,7 @@ class SwiftRadioUITests: XCTestCase {
     
     func assertStationOnMenu(_ stationName:String) {
         let button = app.buttons["nowPlaying"];
+        button.gentleScroll(.bottomHalf)
         XCTAssertTrue(button.label.contains(stationName))
     }
     
